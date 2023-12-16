@@ -34,4 +34,25 @@ class UserController extends Controller
 
         return new UserResource($user);
     }
+
+    public function update(StoreUpdateUserRequest $request, string $id){
+
+        $user = User::findOrFail($id);
+        $data = $request->validated();
+
+        if($request->password != null){
+            $data['paswword'] = bcrypt($request->password);
+        }
+
+        $user->update($data);
+
+        return new UserResource($user);
+    }
+
+    public function destroy(string $id){
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return response()->json([],204);
+    }
 }
