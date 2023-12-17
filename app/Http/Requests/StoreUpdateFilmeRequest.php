@@ -26,7 +26,7 @@ class StoreUpdateFilmeRequest extends FormRequest
         [
             'nome' =>'required|min:3|max:255',
             'duracao' =>'required|min:3|max:255',
-            'classificacao' =>'required|min:3|max:255',
+            'classificacao' =>'required|min:1|max:3',
             'descricao' =>'required|min:3|max:255',
             'link' =>'required|min:3|max:255',
 
