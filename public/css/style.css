@@ -1,0 +1,398 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    border: none;
+    outline: none;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* FIM RESET */
+
+.cabecalho {
+    width: 100%;
+    float: left;
+    padding: 3% 4%;
+    /*  background-color: rgb(25, 24, 24); */
+}
+
+.logo {
+    width: 214px;
+    height: 56px;
+    float: left;
+    background: url(../img/jota.png) center center/214px no-repeat;
+    font-size: 0;
+}
+
+.btn-menu {
+    width: 56px;
+    height: 56px;
+    float: right;
+    text-align: center;
+    color: #fff;
+    border-radius: 56px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ce2e3c, #da6709);
+}
+
+.menu {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    top: 0;
+    left: 0;
+}
+
+.menu button{
+   /*  padding: 2%; */
+    background-color: #5a5757;
+    width: 100px;
+    height: 50px;
+    color: white;
+}
+
+.menu i{
+    margin-left: 5%;
+}
+
+    menu button, a{
+        text-decoration: none;
+        color: white;
+    }
+.btn-close {
+    font-size: 2.5em;
+    margin-top: 3%;
+    color: #fff;
+    float: right;
+    cursor: pointer;
+    margin-right: 5%;
+    color: #da6709;
+}
+
+.btn-close:hover {
+    color: #ec0c1e;
+}
+
+.menu ul {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.menu li {
+    padding: 1.5%;
+}
+
+.menu li a {
+    color: #fff;
+    font-size: 2em;
+
+}
+
+.menu li a:hover {
+    border: 1px solid #da6709;
+}
+
+
+/* Banner */
+.banner {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 3% 4%;
+    background: url(../img/flash.jpg) no-repeat fixed;
+    /* filter: brightness(50%) */
+
+    
+}
+
+.title {
+    width: 60%;
+    float: left;
+}
+
+.title h2 {
+    font-size: 2.5em;
+    color: #fff;
+    font-weight: 700;
+    /*  float: left; */
+}
+
+.title h3 {
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 300;
+    text-shadow: 14px 5px 12px rgb(221, 212, 212);
+    /*   float: left; */
+}
+
+.buttons {
+    width: 35%;
+    margin-top: 0;
+    /*  margin: 0 auto; */
+    float: right;
+
+
+}
+
+.buttons i {
+    float: right;
+}
+
+.btn-cadastrar {
+    width: 100%;
+    font-size: 1.5em;
+    text-align: left;
+    cursor: pointer;
+    padding: 2%;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #130400;
+    margin-bottom: 1%;
+    margin-top: 2%;
+
+}
+
+.btn-sobre {
+    margin-top: 1%;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: left;
+    cursor: pointer;
+    padding: 2%;
+    border-radius: 5px;
+    background-color: #130400;
+    color: #fff;
+}
+
+
+/* Serviço */
+
+.servicos {
+    width: 33%;
+    /*  background-color: #ce2e3c; */
+    float: left;
+    padding: 3% 4%;
+}
+
+.servico {
+    width: 100%;
+    background-color: #ffff;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 3%;
+}
+
+.servico img {
+    border-radius: 5px 5px;
+}
+
+.inner {
+    padding: 7%;
+}
+
+.inner a {
+    font-size: 1.5em;
+    color: #130400;
+    font-weight: 700;
+}
+
+.inner h4 {
+    font-size: 1.2em;
+    margin-top: 3%;
+}
+
+
+.inner p {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.inscricao {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 3% 4%;
+    background-color: #130400;
+}
+
+.inscricao h2 {
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 700;
+}
+
+.inscricao h3 {
+    color: #fff;
+}
+
+.inscricao form {
+    margin-top: 3%;
+}
+
+.inscricao input {
+    width: 30%;
+    padding: 2% 3%;
+    margin-bottom: 2%;
+    border-radius: 2px 2px;
+    background-color: initial;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.inscricao button {
+    width: 50%;
+    padding: 2% 3%;
+    border-radius: 2px 2px;
+    font-size: 1.2em;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.rodape {
+    width: 100%;
+    float: left;
+    pad: 3% 4%;
+    text-align: center;
+    background: linear-gradient(to right, #ce2e3c, #da6709);
+}
+
+.social-icons {
+    padding-top: 2%;
+}
+
+/* background: linear-gradient(to right, #ce2e3c, #da6709); */
+.social-icons a {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-right: 3%;
+}
+
+.social-icons a:last-child {
+    margin-right: 0;
+}
+
+.social-icons a :hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.rodape p {
+    padding-top: 2%;
+    font-size: 1em;
+    color: white;
+    font-weight: 300;
+    padding-bottom: 2%;
+}
+
+/* @media screen and (min-width:480px) {
+    .logo {
+        width: 56;
+        float: left;
+        background: url(../img/logo-mobile.png) center center/56 no-repeat;
+       
+    }
+} */
+
+/* DEVICES MOBILE */
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .buttons {
+        width: 100%;
+        margin-top: 2%;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .servicos {
+        width: 100%;
+        /*  background-color: #ce2e3c; */
+        /*   float: left; */
+        padding: 3% 4%;
+        margin: 0 auto;
+    }
+
+    .inscricao input {
+        width: 100%;
+    }
+
+    .inscricao button {
+        width: 100%;
+    }
+
+    .logo {
+        width: 80px;
+        background: url(img/logo-mobile.png) center center/80px no-repeat;
+    }
+
+}
+
+@media screen and (min-width: 820px) {
+     /* MENU */
+
+
+     .btn-menu {
+        display: none;
+    }
+
+    .btn-close {
+        display: none;
+    }
+
+    .menu {
+        width: auto;
+        height: 56px;
+        line-height: 56px;
+        float: right;
+        background-color: #f5f5f5;
+        display: block;
+        position: static;
+    }
+
+     .menu li {
+        padding: 0;
+        float: left;
+
+    }
+
+    .menu li a {
+        color: #130400;
+        font-size: 1.2em;
+        padding: 15px;
+    }
+
+    .menu li a:hover {
+        border: none;
+        color: #da6709;
+    } 
+}

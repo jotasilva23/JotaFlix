@@ -15,17 +15,15 @@ use App\Http\Controllers\Admin\ForumController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('site/index');
 });
 
-Route::get('/teste', function(){
-    return view('site/teste');
+Route::get('/cadastroFilme', function () {
+    return view('site/cadastroFilme');
 });
 
-/* Route::get('/sugestao',[TesteController, class]) */
-Route::get('teste/controller', [TesteController::class, 'testeFunc']);
+Route::get('/cadastroUser', function () {
+    return view('site/cadastroUser');
+});
 
-
- Route::get('/forum', [ForumController::class, 'ReturnList'])->name('forum.ReturnLists');
-
-Route::get('/forum/criar', [ForumController::class, 'createList'])->name('/forum.createList');
+/*  */
