@@ -12,19 +12,19 @@ class FilmeController extends Controller
 {
     public function index()
     {
-        $users = Filme::paginate();
-        return FilmeResource::collection($users);
+        $filme = Filme::paginate();
+
+        return view('site.index', ['filmes' => FilmeResource::collection($filme)]);
     }
 
     public function store(Request $request)
     {
         $data = $request->all();
-        $filme = Filme::create($data);
+        Filme::create($data);
 
-        dd($data);
-
-        return new FilmeResource($filme);
+        return redirect('/');
     }
+
 
     public function show(string $id)
     {
@@ -32,7 +32,8 @@ class FilmeController extends Controller
         return new FilmeResource($filme);
     }
 
-    public function update(StoreUpdateFilmeRequest $request, string $id){
+    public function update(StoreUpdateFilmeRequest $request, string $id)
+    {
 
         $filme = Filme::findOrFail($id);
         $data = $request->validated();
@@ -41,10 +42,11 @@ class FilmeController extends Controller
         return new FilmeResource($filme);
     }
 
-    public function destroy(string $id){
+    public function destroy(string $id)
+    {
         $filme = Filme::findOrFail($id);
         $filme->delete();
 
-        return response()->json([],204);
+        return response()->json([], 204);
     }
 }

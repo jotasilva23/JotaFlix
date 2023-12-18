@@ -41,12 +41,9 @@
         <nav class="menu">
             <a class="btn-close"><i class="fa fa-times"></i></a>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Lista</a></li>
-                <li><a href="#">Cadastro</a></li>
-                <!-- <li><a href="#">Quem somos</a></li> -->
-                <!--  <li><a href="#">Contatos</a></li> -->
-                <button><a href=""> Pesquisar<i class="fa fa-search"></i></a></button>
+                <li><a href="/">Início</a></li>
+                <li><a href="/insertUsers">Cadastrar Usuários</a></li>
+                <li><a href="/insertFilmes">Cadastrar Filmes</a></li>
             </ul>
         </nav>
     </header>
@@ -55,13 +52,14 @@
     <section class="inscricao">
         <h2> Cadastro de Filme</h2>
         <h3> Receba novidades sobre novos filmes</h3>
-        <form action="" method="post">
+        <form action="{{ route('filme.insert') }}" method="POST">
+            @csrf
             <input type="text" name="nome" placeholder="Nome do Filme">
             <input type="text" name="descricao" placeholder="Descrição">
             <input type="time" name="duracao" placeholder="Duração">
             <input type="number" name="classificacao" placeholder="Classificação indicativa" min="1">
             <input type="url" name="link" placeholder="Link do filme">
-            <input type="file" name="foto" placeholder="escolha a imagem">
+          {{--   <input type="file" name="foto" placeholder="escolha a imagem"> --}}
             <button>Cadastrar</button>
         </form>
     </section>

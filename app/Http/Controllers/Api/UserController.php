@@ -13,19 +13,31 @@ class UserController extends Controller
     public function index()
     {
         $users = User::paginate();
-        return UserResource::collection($users);
+       /*  return UserResource::collection($users); */
+        return view('site.listaUsers', ['users' => UserResource::collection($users)]);
+
     }
 
-    public function store(StoreUpdateUserRequest $request)
-    {
-        $data = $request->validated();
+    public function store(Request $request)
+    {    $rules =
+        [
+            'name' =>'required|min:3|max:255',
+            'email' => [
+                'required',
+                'email',
+                'max:255',
+                'unique:users'
+            ],
+            'password' => 'required|min:6|max:100'
+        ];
+
+        $data = $request->validate($rules);
         $data['password'] = bcrypt($request->password);
-        $user = User::create($data);
+         User::create($data);
 
-        dd($data);
-
-        return new UserResource($user);
+        return redirect('/listUsers');
     }
+    
 
     public function show(string $id)
     {

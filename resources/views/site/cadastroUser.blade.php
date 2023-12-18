@@ -41,12 +41,10 @@
         <nav class="menu">
             <a class="btn-close"><i class="fa fa-times"></i></a>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Lista</a></li>
-                <li><a href="#">Cadastro</a></li>
-                <!-- <li><a href="#">Quem somos</a></li> -->
-                <!--  <li><a href="#">Contatos</a></li> -->
-                <button><a href=""> Pesquisar<i class="fa fa-search"></i></a></button>
+                <li><a href="/">Início</a></li>
+                <li><a href="/insertUsers">Cadastrar Usuários</a></li>
+                <li><a href="/insertFilmes">Cadastrar Filmes</a></li>
+                <button><a href="/listUsers"> Lista<i class="fa fa-list"></i></a></button>
             </ul>
         </nav>
     </header>
@@ -54,16 +52,16 @@
 
     <section class="inscricao">
         <h2> Cadastro de Usuários</h2>
-        <form action="" method="post">
-            <input type="text" name="nome" placeholder="Nome do usuário">
+        <form action="{{ route('user.insert') }}" method="POST">
+            @csrf
+            <input type="text" name="name" placeholder="Nome do usuário">
             <input type="email" name="email" placeholder="E-mail">
-            <input type="cpf" name="cpf" placeholder="CPF: 000.000.000-00">
             <input type="password" name="password" placeholder="Senha">
-            
+
             <button>Cadastrar</button>
         </form>
-    </section>
 
+    </section>
 
     <footer class="rodape">
         <div class="social-icons">
@@ -93,7 +91,7 @@
         });
     </script>
 
-    
+
 </body>
 
 </html>

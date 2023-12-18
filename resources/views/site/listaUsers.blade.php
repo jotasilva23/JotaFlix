@@ -50,42 +50,27 @@
     </header>
 
 
-    <div class="banner">
-        <div class="title">
-            <h2>Os melhores filmes da temporada</h2>
-            <h3>Aqui você tem entretenimento garantido e filmes atulizados</h3>
-        </div>
-
-        <div class="buttons">
-            <button class="btn-cadastrar">Novidades <i class="fa fa-plus-circle"></i></button>
-            <button class="btn-sobre">Sobre <i class="fa fa-question-circle"></i></button>
-        </div>
-    </div>
-
     <section class="inscricao">
-        @foreach ($filmes as $filme)
+       {{--  @foreach ($filmes as $filme)
             @if($filme != null){
                 <h2> Filmes novos</h2>
                 @break
             }
             @endif
-        @endforeach
+        @endforeach --}}
        
         <button class="btn-menu"> <i class="fa fa-bars fa-lg"></i></button>
 
     </section>
 
-    @foreach ($filmes as $filme)
+    @foreach ($users as $user)
     
-        <div main class="servicos">
-            <article class="servico">
-                <a href="{{$filme->link}}" target="_blank"><img src="img/filme.png" alt="servicos"></a>
-                <h3>Clique na imagem para assistir o filme</h3>
+        <div main class="users">
+            <article class="user">
+                <img src="img/user.png" alt="servicos">
                 <div class="inner">
-                    <a href="#">{{ $filme->nome }}</a>
-                    <h4>{{ $filme->descricao }}</h4>
-                    Duração:<p>{{ $filme->duracao }}</p>
-                    Clas. Ind:<p>{{ $filme->classificacao }} anos</p>
+                    <h2>{{ $user->name }}</h2>
+                    <h2>{{ $user->email }}</h2>
                 </div>
             </article>
         </div>
